@@ -13,7 +13,7 @@ circleArea radius = pi * (radius * radius)
 -- return any change between -100 and 100 (exclusive)
 leftoverCents :: Int -> Int
 leftoverCents amt
-  | amt > -100 && amt < 100 = amt
+  | -100 < amt && amt < 100 = amt
   | amt >= 100 = leftoverCents (amt - 100)
   | amt <= 100 = leftoverCents (amt + 100)
   | otherwise = amt
